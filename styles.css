@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+*,
+*::before,
+*::after {
+  color: white;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #121212;
+}
+
+.grid {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 3px solid #121212;
+  border-radius: 50%;
+  outline: none;
+  background-color: rgba(255, 255, 255, 5%);
+}
+
+.grid .fn {
+  background-color: rgba(255, 255, 255, 11%);
+}
+
+.grid .eq {
+  background-color: rgb(220, 20, 60);
+}
+
+.grid > button:hover {
+  background-color: rgba(255, 255, 255, 8%);
+}
+
+.grid .eq:hover {
+  background-color: rgba(220, 20, 60, 85%);
+}
+
+.display {
+  grid-column: 1 / -1;
+  background-color: rgba(255, 255, 255, 5%);
+  border: 5px solid #121212;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.display .prev {
+  color: rgba(255, 255, 255, 50%);
+  font-size: 1rem;
+}
+
+.display .curr {
+  color: white;
+  font-size: 3rem;
+}
